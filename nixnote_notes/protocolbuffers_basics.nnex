@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE NixNote-Export>
+<nixnote-export version="2" exportType="export" application="NixNote" applicationVersion="2.x">
+    <Note>
+        <Guid>844dbbee-d55d-4b3f-bb27-b697e5f1f946</Guid>
+        <Title>protocolbuffers basics</Title>
+        <Content><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM 'http://xml.evernote.com/pub/enml2.dtd'><en-note style=
+"word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+
+basics references:
+<div>
+<ul>
+<li><a href=
+"https://tutorialedge.net/golang/go-protocol-buffer-tutorial/"
+title=
+"https://tutorialedge.net/golang/go-protocol-buffer-tutorial/">https://tutorialedge.net/golang/go-protocol-buffer-tutorial/</a><br />
+</li>
+<li><a href=
+"https://developers.google.com/protocol-buffers/docs/gotutorial"
+title=
+"https://developers.google.com/protocol-buffers/docs/gotutorial">https://developers.google.com/protocol-buffers/docs/gotutorial</a></li>
+</ul>
+</div>
+<div>
+<ul>
+<li>go get github.com/golang/protobuf<br /></li>
+<ul>
+<li>Note: "can't load package", expected</li>
+<li>superseded by:&nbsp;<code style=
+"box-sizing: border-box; background-color: var(--color-markdown-code-bg); outline-width: 0px; font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; font-size: 13.6px; font-variant-ligatures: normal; orphans: 2; widows: 2; padding: 0.2em 0.4em; margin: 0px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px;"><a href="https://pkg.go.dev/mod/google.golang.org/protobuf"
+rel="nofollow" style=
+"box-sizing: border-box; background-color: rgb(255, 255, 255); outline-width: 0px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; font-size: 16px; font-variant-ligatures: normal; orphans: 2; widows: 2;"
+title=
+"https://pkg.go.dev/mod/google.golang.org/protobuf">google.golang.org/protobuf</a></code></li>
+<li><br /></li>
+</ul>
+</ul>
+</div>
+<div>
+<ul>
+<li>go get github.com/golang/protobuf/proto<br /></li>
+<ul>
+<li>that migh be actually deprecated, or better use:</li>
+<li style=
+"margin: 0px 0px var(--s-prose-spacing-condensed); margin-bottom: var(--s-prose-spacing-condensed); padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: inherit; font-variant-position: inherit; font-variant-caps: inherit; font-variant-numeric: inherit; font-variant-alternates: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; box-sizing: inherit; overflow-wrap: break-word;">
+go get -u google.golang.org/grpc</li>
+<li style=
+"margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: inherit; font-variant-position: inherit; font-variant-caps: inherit; font-variant-numeric: inherit; font-variant-alternates: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; box-sizing: inherit; overflow-wrap: break-word;">
+go get -u github.com/golang/protobuf/protoc-gen-go</li>
+</ul>
+<li>add to the PATH under Linux:</li>
+<li>
+<pre style=
+"margin-top: 0px; margin-bottom: calc(var(--s-prose-spacing) + 0.4em); padding: 12px; border: 0px; font-variant-ligatures: normal; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: 1.30769; font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, sans-serif; font-size: 13px; vertical-align: baseline; box-sizing: inherit; width: auto; max-height: 600px; overflow: auto; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; color: var(--highlight-color); overflow-wrap: normal; orphans: 2; widows: 2;">
+<code style=
+"margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: inherit; font-variant-position: inherit; font-variant-caps: inherit; font-variant-numeric: inherit; font-variant-alternates: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; box-sizing: inherit; white-space: inherit;"><span style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: inherit; font-variant-position: inherit; font-variant-caps: inherit; font-variant-numeric: inherit; font-variant-alternates: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; box-sizing: inherit; color: var(--highlight-literal);">echo</span> <span style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: inherit; font-variant-position: inherit; font-variant-caps: inherit; font-variant-numeric: inherit; font-variant-alternates: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; box-sizing: inherit; color: var(--highlight-variable);">'export GOPATH=$HOME/go/bin'</span> &gt;&gt; <span style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: inherit; font-variant-position: inherit; font-variant-caps: inherit; font-variant-numeric: inherit; font-variant-alternates: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; box-sizing: inherit; color: var(--highlight-variable);">$HOME</span>/.bashrc
+<span style=
+"margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: inherit; font-variant-position: inherit; font-variant-caps: inherit; font-variant-numeric: inherit; font-variant-alternates: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; box-sizing: inherit; color: var(--highlight-literal);">source</span> <span style="margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant-ligatures: inherit; font-variant-position: inherit; font-variant-caps: inherit; font-variant-numeric: inherit; font-variant-alternates: inherit; font-variant-east-asian: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; box-sizing: inherit; color: var(--highlight-variable);">$HOME</span>/.bashrc
+
+
+if there is a subfolder bin in go/bin with protoc-go-gen:
+
+echo 'export PATH=$PATH:$GOPATH/bin' &gt;&gt; $HOME/.bashrc</code></pre></li>
+</ul>
+<div>If installation fails the command protoc will not be available
+yet (protoc not in go bin folder).</div>
+</div>
+<div>Use linux package:</div>
+<div>
+<pre style=
+"box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'liberation mono', 'courier new', monospace; font-size: 14px; margin-top: 0px; margin-bottom: 0px; overflow: auto; color: rgb(34, 34, 34); overflow-wrap: normal; background-color: rgb(240, 243, 243); padding: 1rem; font-variant-ligatures: normal; orphans: 2; widows: 2; tab-size: 4;">
+<code style=
+"box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'liberation mono', 'courier new', monospace; color: inherit; overflow-wrap: break-word; word-break: normal; padding: 0px; margin: 0px; border: 0px; background-color: inherit !important;">apt install -y protobuf-compiler<br /></code></pre></div>
+<div>or follow the instructions here:&nbsp;</div>
+<div>
+<ul>
+<li><a href="https://github.com/golang/protobuf" title=
+"https://github.com/golang/protobuf">https://github.com/golang/protobuf</a><br />
+</li>
+<li><a href="https://grpc.io/docs/protoc-installation/" title=
+"https://grpc.io/docs/protoc-installation/">https://grpc.io/docs/protoc-installation/</a><br />
+</li>
+</ul>
+</div>
+<div>command to compile the proto file:</div>
+<div>
+<ul>
+<li>protoc --go_out=. *.proto<br /></li>
+</ul>
+</div>
+<div>
+<div><br /></div>
+</div>
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+</en-note>]]></Content>
+        <ContentLength>7883</ContentLength>
+        <Created>1613769345938</Created>
+        <Updated>1613775214374</Updated>
+        <Active>true</Active>
+        <UpdateSequenceNumber>0</UpdateSequenceNumber>
+        <NotebookGuid>a3e38484-8dd9-4cba-9e43-8c43fb71bb61</NotebookGuid>
+        <Attributes>
+            <Author>wolfi</Author>
+        </Attributes>
+        <Dirty>true</Dirty>
+    </Note>
+</nixnote-export>

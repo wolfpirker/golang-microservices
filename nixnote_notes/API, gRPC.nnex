@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE NixNote-Export>
+<nixnote-export version="2" exportType="export" application="NixNote" applicationVersion="2.x">
+    <Note>
+        <Guid>48b91ea6-d04a-498c-a565-da2e9977fb0f</Guid>
+        <Title>API, gRPC</Title>
+        <Content><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM 'http://xml.evernote.com/pub/enml2.dtd'><en-note style=
+"word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+
+data model
+<div>
+<ul>
+<li>JSON</li>
+<li>XML</li>
+<li>something binary?</li>
+</ul>
+<div>endpoints</div>
+</div>
+<div>
+<ul>
+<li>GET /api/v1/user/123/post/456</li>
+<ul>
+<li>REST API</li>
+</ul>
+<li>POST /api/v1/user/123/post</li>
+</ul>
+<div>how to invoke it and handle errors:</div>
+</div>
+<div>
+<ul>
+<li>API</li>
+<li>Error</li>
+</ul>
+<div>Efficiency of the API</div>
+</div>
+<div>
+<ul>
+<li>How much data do I get on one call?</li>
+<li>Too much data?</li>
+<li>Too little data -&gt; many API calls</li>
+<li>latency</li>
+<li>scalability</li>
+<li>load balanccing</li>
+<li>inter operability with many languages?</li>
+<li>authentication, monitoring, logging?</li>
+</ul>
+<div>-&gt; gRPC tried to avoid the difficult points; and lets you
+do the fun stuff</div>
+</div>
+<div><br /></div>
+<div>at its core, an API is a contract saying:</div>
+<div>
+<ul>
+<li>send me this request (client)</li>
+<li>I will send you this response (server)</li>
+<li>it's all about data</li>
+<li>the rest of before, we will leave to the gRPC framework</li>
+</ul>
+<div><br /></div>
+</div>
+</en-note>]]></Content>
+        <ContentLength>1271</ContentLength>
+        <Created>1614456542064</Created>
+        <Updated>1615407353227</Updated>
+        <Active>true</Active>
+        <UpdateSequenceNumber>0</UpdateSequenceNumber>
+        <NotebookGuid>a3e38484-8dd9-4cba-9e43-8c43fb71bb61</NotebookGuid>
+        <Attributes>
+            <Author>wolfi</Author>
+        </Attributes>
+        <Dirty>true</Dirty>
+    </Note>
+</nixnote-export>

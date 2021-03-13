@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE NixNote-Export>
+<nixnote-export version="2" exportType="export" application="NixNote" applicationVersion="2.x">
+    <Note>
+        <Guid>2a83cd2b-e24e-4fdd-ae56-96e27668d362</Guid>
+        <Title>gRPC in Go</Title>
+        <Content><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-note SYSTEM 'http://xml.evernote.com/pub/enml2.dtd'><en-note style=
+"word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+
+<a href="https://grpc.io/docs/languages/go/quickstart/" title=
+"https://grpc.io/docs/languages/go/quickstart/">https://grpc.io/docs/languages/go/quickstart/</a><br />
+
+<div><br /></div>
+<div><br /></div>
+<div><br /></div>
+<div>video tutorials:</div>
+<div>
+<ul>
+<li><a href=
+"https://www.youtube.com/watch?v=Y92WWaZJl24&amp;feature=youtu.be"
+title=
+"https://www.youtube.com/watch?v=Y92WWaZJl24&amp;feature=youtu.be">https://www.youtube.com/watch?v=Y92WWaZJl24&amp;feature=youtu.be</a><br />
+</li>
+</ul>
+</div>
+<div><br /></div>
+<div>protocol buffers should be installed, check with</div>
+<div>
+<ul>
+<li>protoc --version</li>
+</ul>
+<div><br /></div>
+</div>
+<div>get the go grpc package:</div>
+<div>
+<ul>
+<li>go get -u google.golang.org/grpc</li>
+<li>go get -u github.com/golang/protobuf/protoc-gen-go</li>
+<ul>
+<li>see note "protocolbuffers basics"</li>
+</ul>
+<li><br /></li>
+</ul>
+</div>
+</en-note>]]></Content>
+        <ContentLength>1109</ContentLength>
+        <Created>1613771005379</Created>
+        <Updated>1614376888630</Updated>
+        <Active>true</Active>
+        <UpdateSequenceNumber>0</UpdateSequenceNumber>
+        <NotebookGuid>a3e38484-8dd9-4cba-9e43-8c43fb71bb61</NotebookGuid>
+        <Attributes>
+            <Author>wolfi</Author>
+        </Attributes>
+        <Dirty>true</Dirty>
+    </Note>
+</nixnote-export>
