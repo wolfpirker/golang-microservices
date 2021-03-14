@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package greetpb;
+option go_package = "calculator/calcpb";
+
+message SumRequest {
+    int32 summand1 = 1;
+    int32 summand2 = 2;
+}
+
+message SumResponse {
+    int32 sum_result = 1;
+}
+
+service CalcService{
+    rpc Sum(SumRequest) returns (SumResponse) {};
+
+}
