@@ -16,11 +16,22 @@ message GreetResponse {
     string result = 1;
 }
 
+message GreetManyTimesRequest {
+    Greeting greeting = 1;
+}
+
+message GreetManyTimesRespone {
+    string result = 1;
+}
+
 service GreetService{
     // Unary
     // convention: in Something request is SomethingRequest
     // response is SomethingResponse
     rpc Greet(GreetRequest) returns (GreetResponse) {};
 
-
+    // Server Streaming
+    // any time you have rpc you want to have a own type of Request and Response!
+    // because these things can drift overtime
+    rpc GreetManyTimes(GreetManyTimesRequest) returns (stream GreetManyTimesRespone) {};
 }
