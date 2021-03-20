@@ -24,6 +24,8 @@ func main() {
 	doUnary(c)
 
 	doServerStreaming(c)
+
+	doClientStreaming(c)
 }
 
 func doUnary(c calcpb.CalcServiceClient) {
@@ -74,5 +76,40 @@ func doServerStreaming(c calcpb.CalcServiceClient) {
 		}
 		log.Printf("Response from DecomposeNumber: %v", msg.GetNumber())
 	}
+
+}
+
+func doClientStreaming(c calcpb.CalcServiceClient) {
+	var num1 int32 = 0
+	fmt.Println("Starting to do a Client Streaming RPC...")
+
+	// Note: we don't need a request
+	stream, err := c.ComputeAverage(context.Background())
+	if err != nil {
+		log.Fatalf("error while calling ComputeAverage: %v", err)
+	}
+
+	// we iterate over our slice and send each message
+	for {
+		fmt.Println("enter a number (or anything else to stop): ")
+		_, err := fmt.Scanf("%d", &num1)
+
+		if err != nil {
+			// stop
+			break
+		} else {
+			req := &calcpb.ComputeAverageRequest{
+				Number: num1,
+			}
+			fmt.Printf("Sending req: %v\n", req)
+			stream.Send(req)
+		}
+	}
+
+	res, err := stream.CloseAndRecv()
+	if err != nil {
+		log.Fatalf("error while receiving response from ComputeAverage: %v", err)
+	}
+	fmt.Printf("ComputeAverage Response: %v\n", res.GetResult())
 
 }

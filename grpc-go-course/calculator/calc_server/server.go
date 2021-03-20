@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"io"
 	"log"
 	"net"
 
@@ -22,7 +23,6 @@ func (*server) Sum(ctx context.Context, req *calcpb.SumRequest) (*calcpb.SumResp
 	return res, nil
 }
 
-// func (*server) GreetManyTimes(req *greetpb.GreetManyTimesRequest, stream greetpb.GreetService_GreetManyTimesServer) error {
 func (*server) PrimeNumberDecomposition(in *calcpb.PrimeNumberDecompositionRequest, stream calcpb.CalcService_PrimeNumberDecompositionServer) error {
 	// example: The client will send one number (120) and the server will respond
 	// with a stream of (2,2,2,3,5), because 120=2*2*2*3*5
@@ -44,6 +44,27 @@ func (*server) PrimeNumberDecomposition(in *calcpb.PrimeNumberDecompositionReque
 	}
 
 	return nil
+}
+
+func (*server) ComputeAverage(stream calcpb.CalcService_ComputeAverageServer) error {
+	fmt.Printf("ComputeAverage function was invoked with a streaming request\n")
+
+	sum := int32(0)
+	for count := int32(0); ; count++ {
+		req, err := stream.Recv()
+		if err == io.EOF {
+			// we have finished reading the client stream
+
+			average := float64(sum) / float64(count)
+			return stream.SendAndClose(&calcpb.ComputeAverageResponse{
+				Result: average,
+			})
+		}
+		if err != nil {
+			log.Fatalf("Error while reading client stream: %v", err)
+		}
+		sum += req.GetNumber()
+	}
 }
 
 func mod(a, b int32) int32 {
