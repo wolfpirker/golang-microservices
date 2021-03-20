@@ -24,6 +24,14 @@ message GreetManyTimesRespone {
     string result = 1;
 }
 
+message LongGreetRequest {
+    Greeting greeting = 1;
+}
+
+message LongGreetResponse {
+    string result = 1;
+}
+
 service GreetService{
     // Unary
     // convention: in Something request is SomethingRequest
@@ -34,4 +42,7 @@ service GreetService{
     // any time you have rpc you want to have a own type of Request and Response!
     // because these things can drift overtime
     rpc GreetManyTimes(GreetManyTimesRequest) returns (stream GreetManyTimesRespone) {};
+
+    // Client Streaming
+    rpc LongGreet(stream LongGreetRequest) returns (LongGreetResponse) {};
 }
