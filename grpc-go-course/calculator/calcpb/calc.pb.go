@@ -240,19 +240,20 @@ var file_calculator_calcpb_calc_proto_rawDesc = []byte{
 	0x75, 0x6d, 0x62, 0x65, 0x72, 0x44, 0x65, 0x63, 0x6f, 0x6d, 0x70, 0x6f, 0x73, 0x69, 0x74, 0x69,
 	0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x6e, 0x75,
 	0x6d, 0x62, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06, 0x6e, 0x75, 0x6d, 0x62,
-	0x65, 0x72, 0x32, 0xad, 0x01, 0x0a, 0x0b, 0x43, 0x61, 0x6c, 0x63, 0x53, 0x65, 0x72, 0x76, 0x69,
+	0x65, 0x72, 0x32, 0xb6, 0x01, 0x0a, 0x0b, 0x43, 0x61, 0x6c, 0x63, 0x53, 0x65, 0x72, 0x76, 0x69,
 	0x63, 0x65, 0x12, 0x32, 0x0a, 0x03, 0x53, 0x75, 0x6d, 0x12, 0x13, 0x2e, 0x67, 0x72, 0x65, 0x65,
 	0x74, 0x70, 0x62, 0x2e, 0x53, 0x75, 0x6d, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x14,
 	0x2e, 0x67, 0x72, 0x65, 0x65, 0x74, 0x70, 0x62, 0x2e, 0x53, 0x75, 0x6d, 0x52, 0x65, 0x73, 0x70,
-	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x6a, 0x0a, 0x0f, 0x44, 0x65, 0x63, 0x6f, 0x6d, 0x70,
-	0x6f, 0x73, 0x65, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x12, 0x28, 0x2e, 0x67, 0x72, 0x65, 0x65,
-	0x74, 0x70, 0x62, 0x2e, 0x50, 0x72, 0x69, 0x6d, 0x65, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x44,
-	0x65, 0x63, 0x6f, 0x6d, 0x70, 0x6f, 0x73, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x29, 0x2e, 0x67, 0x72, 0x65, 0x65, 0x74, 0x70, 0x62, 0x2e, 0x50, 0x72,
-	0x69, 0x6d, 0x65, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x44, 0x65, 0x63, 0x6f, 0x6d, 0x70, 0x6f,
-	0x73, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00,
-	0x30, 0x01, 0x42, 0x13, 0x5a, 0x11, 0x63, 0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72,
-	0x2f, 0x63, 0x61, 0x6c, 0x63, 0x70, 0x62, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x73, 0x0a, 0x18, 0x50, 0x72, 0x69, 0x6d, 0x65, 0x4e,
+	0x75, 0x6d, 0x62, 0x65, 0x72, 0x44, 0x65, 0x63, 0x6f, 0x6d, 0x70, 0x6f, 0x73, 0x69, 0x74, 0x69,
+	0x6f, 0x6e, 0x12, 0x28, 0x2e, 0x67, 0x72, 0x65, 0x65, 0x74, 0x70, 0x62, 0x2e, 0x50, 0x72, 0x69,
+	0x6d, 0x65, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x44, 0x65, 0x63, 0x6f, 0x6d, 0x70, 0x6f, 0x73,
+	0x69, 0x74, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x29, 0x2e, 0x67,
+	0x72, 0x65, 0x65, 0x74, 0x70, 0x62, 0x2e, 0x50, 0x72, 0x69, 0x6d, 0x65, 0x4e, 0x75, 0x6d, 0x62,
+	0x65, 0x72, 0x44, 0x65, 0x63, 0x6f, 0x6d, 0x70, 0x6f, 0x73, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x30, 0x01, 0x42, 0x13, 0x5a, 0x11, 0x63,
+	0x61, 0x6c, 0x63, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x2f, 0x63, 0x61, 0x6c, 0x63, 0x70, 0x62,
+	0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -276,9 +277,9 @@ var file_calculator_calcpb_calc_proto_goTypes = []interface{}{
 }
 var file_calculator_calcpb_calc_proto_depIdxs = []int32{
 	0, // 0: greetpb.CalcService.Sum:input_type -> greetpb.SumRequest
-	2, // 1: greetpb.CalcService.DecomposeNumber:input_type -> greetpb.PrimeNumberDecompositionRequest
+	2, // 1: greetpb.CalcService.PrimeNumberDecomposition:input_type -> greetpb.PrimeNumberDecompositionRequest
 	1, // 2: greetpb.CalcService.Sum:output_type -> greetpb.SumResponse
-	3, // 3: greetpb.CalcService.DecomposeNumber:output_type -> greetpb.PrimeNumberDecompositionResponse
+	3, // 3: greetpb.CalcService.PrimeNumberDecomposition:output_type -> greetpb.PrimeNumberDecompositionResponse
 	2, // [2:4] is the sub-list for method output_type
 	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -376,7 +377,7 @@ type CalcServiceClient interface {
 	// unary
 	Sum(ctx context.Context, in *SumRequest, opts ...grpc.CallOption) (*SumResponse, error)
 	// server streaming
-	DecomposeNumber(ctx context.Context, in *PrimeNumberDecompositionRequest, opts ...grpc.CallOption) (CalcService_DecomposeNumberClient, error)
+	PrimeNumberDecomposition(ctx context.Context, in *PrimeNumberDecompositionRequest, opts ...grpc.CallOption) (CalcService_PrimeNumberDecompositionClient, error)
 }
 
 type calcServiceClient struct {
@@ -396,12 +397,12 @@ func (c *calcServiceClient) Sum(ctx context.Context, in *SumRequest, opts ...grp
 	return out, nil
 }
 
-func (c *calcServiceClient) DecomposeNumber(ctx context.Context, in *PrimeNumberDecompositionRequest, opts ...grpc.CallOption) (CalcService_DecomposeNumberClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_CalcService_serviceDesc.Streams[0], "/greetpb.CalcService/DecomposeNumber", opts...)
+func (c *calcServiceClient) PrimeNumberDecomposition(ctx context.Context, in *PrimeNumberDecompositionRequest, opts ...grpc.CallOption) (CalcService_PrimeNumberDecompositionClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_CalcService_serviceDesc.Streams[0], "/greetpb.CalcService/PrimeNumberDecomposition", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &calcServiceDecomposeNumberClient{stream}
+	x := &calcServicePrimeNumberDecompositionClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -411,16 +412,16 @@ func (c *calcServiceClient) DecomposeNumber(ctx context.Context, in *PrimeNumber
 	return x, nil
 }
 
-type CalcService_DecomposeNumberClient interface {
+type CalcService_PrimeNumberDecompositionClient interface {
 	Recv() (*PrimeNumberDecompositionResponse, error)
 	grpc.ClientStream
 }
 
-type calcServiceDecomposeNumberClient struct {
+type calcServicePrimeNumberDecompositionClient struct {
 	grpc.ClientStream
 }
 
-func (x *calcServiceDecomposeNumberClient) Recv() (*PrimeNumberDecompositionResponse, error) {
+func (x *calcServicePrimeNumberDecompositionClient) Recv() (*PrimeNumberDecompositionResponse, error) {
 	m := new(PrimeNumberDecompositionResponse)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
@@ -433,7 +434,7 @@ type CalcServiceServer interface {
 	// unary
 	Sum(context.Context, *SumRequest) (*SumResponse, error)
 	// server streaming
-	DecomposeNumber(*PrimeNumberDecompositionRequest, CalcService_DecomposeNumberServer) error
+	PrimeNumberDecomposition(*PrimeNumberDecompositionRequest, CalcService_PrimeNumberDecompositionServer) error
 }
 
 // UnimplementedCalcServiceServer can be embedded to have forward compatible implementations.
@@ -443,8 +444,8 @@ type UnimplementedCalcServiceServer struct {
 func (*UnimplementedCalcServiceServer) Sum(context.Context, *SumRequest) (*SumResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Sum not implemented")
 }
-func (*UnimplementedCalcServiceServer) DecomposeNumber(*PrimeNumberDecompositionRequest, CalcService_DecomposeNumberServer) error {
-	return status.Errorf(codes.Unimplemented, "method DecomposeNumber not implemented")
+func (*UnimplementedCalcServiceServer) PrimeNumberDecomposition(*PrimeNumberDecompositionRequest, CalcService_PrimeNumberDecompositionServer) error {
+	return status.Errorf(codes.Unimplemented, "method PrimeNumberDecomposition not implemented")
 }
 
 func RegisterCalcServiceServer(s *grpc.Server, srv CalcServiceServer) {
@@ -469,24 +470,24 @@ func _CalcService_Sum_Handler(srv interface{}, ctx context.Context, dec func(int
 	return interceptor(ctx, in, info, handler)
 }
 
-func _CalcService_DecomposeNumber_Handler(srv interface{}, stream grpc.ServerStream) error {
+func _CalcService_PrimeNumberDecomposition_Handler(srv interface{}, stream grpc.ServerStream) error {
 	m := new(PrimeNumberDecompositionRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(CalcServiceServer).DecomposeNumber(m, &calcServiceDecomposeNumberServer{stream})
+	return srv.(CalcServiceServer).PrimeNumberDecomposition(m, &calcServicePrimeNumberDecompositionServer{stream})
 }
 
-type CalcService_DecomposeNumberServer interface {
+type CalcService_PrimeNumberDecompositionServer interface {
 	Send(*PrimeNumberDecompositionResponse) error
 	grpc.ServerStream
 }
 
-type calcServiceDecomposeNumberServer struct {
+type calcServicePrimeNumberDecompositionServer struct {
 	grpc.ServerStream
 }
 
-func (x *calcServiceDecomposeNumberServer) Send(m *PrimeNumberDecompositionResponse) error {
+func (x *calcServicePrimeNumberDecompositionServer) Send(m *PrimeNumberDecompositionResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
@@ -501,8 +502,8 @@ var _CalcService_serviceDesc = grpc.ServiceDesc{
 	},
 	Streams: []grpc.StreamDesc{
 		{
-			StreamName:    "DecomposeNumber",
-			Handler:       _CalcService_DecomposeNumber_Handler,
+			StreamName:    "PrimeNumberDecomposition",
+			Handler:       _CalcService_PrimeNumberDecomposition_Handler,
 			ServerStreams: true,
 		},
 	},

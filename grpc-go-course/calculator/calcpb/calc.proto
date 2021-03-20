@@ -25,6 +25,6 @@ service CalcService{
     rpc Sum(SumRequest) returns (SumResponse) {}; 
 
     // server streaming
-    rpc DecomposeNumber(PrimeNumberDecompositionRequest) returns (stream PrimeNumberDecompositionResponse) {};
+    rpc PrimeNumberDecomposition(PrimeNumberDecompositionRequest) returns (stream PrimeNumberDecompositionResponse) {};
 
 }

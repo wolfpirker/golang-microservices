@@ -59,7 +59,7 @@ func doServerStreaming(c calcpb.CalcServiceClient) {
 		Number: num1,
 	}
 
-	resStream, err := c.DecomposeNumber(context.Background(), req)
+	resStream, err := c.PrimeNumberDecomposition(context.Background(), req)
 	if err != nil {
 		log.Fatalf("error while calling DecomposeNumber RPC: %v", err)
 	}
