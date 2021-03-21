@@ -780,6 +780,9 @@ type CalcServiceClient interface {
 	ComputeAverage(ctx context.Context, opts ...grpc.CallOption) (CalcService_ComputeAverageClient, error)
 	// BiDi Streaming
 	FindMaximum(ctx context.Context, opts ...grpc.CallOption) (CalcService_FindMaximumClient, error)
+	// error handling
+	// this RPC will throw an exception if the sent number is negative
+	// the error being sent is of type INVALID_ARGUMENT
 	SquareRoot(ctx context.Context, in *SquareRootRequest, opts ...grpc.CallOption) (*SquareRootResponse, error)
 }
 
@@ -916,6 +919,9 @@ type CalcServiceServer interface {
 	ComputeAverage(CalcService_ComputeAverageServer) error
 	// BiDi Streaming
 	FindMaximum(CalcService_FindMaximumServer) error
+	// error handling
+	// this RPC will throw an exception if the sent number is negative
+	// the error being sent is of type INVALID_ARGUMENT
 	SquareRoot(context.Context, *SquareRootRequest) (*SquareRootResponse, error)
 }
 
