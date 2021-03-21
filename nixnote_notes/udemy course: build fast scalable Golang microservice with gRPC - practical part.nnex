@@ -231,15 +231,92 @@ client is done sending requests!</li>
 <div>#34 Hands on: client implementation</div>
 </div>
 <div>
+<div><br /></div>
+<div>#37 Bi Directional Streaming API</div>
+<div>
 <ul>
-<li><br /></li>
+<li>the client sends many messages to the server and receives many
+responses from the server</li>
+<li>the number of requests and responses does <span style=
+"background-color: rgb(255, 255, 0);">not</span> have to match</li>
+<li>well suited for:</li>
+<ul>
+<li>when client and server needs to send a lot of data
+asynchronously</li>
+<ul>
+<li>no wait on a response to send a new message</li>
 </ul>
+<li>"Chat" protocol</li>
+<li>Long running connections</li>
+</ul>
+</ul>
+<div>how:</div>
+</div>
+<div>
+<ul>
+<li>the keyword "stream" is now used twice</li>
+<li>as for each RPC call we have to define a "Request" message and
+a "Response" message</li>
+</ul>
+<div>#38 Hand on: bidirectional streaming API</div>
+</div>
+<div>
+<ul>
+<li>in the example: GreetEveryoneRequest,
+GreetEveryoneResponse</li>
+</ul>
+<div>#39 BiDi Server implementation</div>
+</div>
+<div>
+<ul>
+<li>Note about the example: a response to every message is
+implemented, but that is not necessary; server could choose how
+many responses to send for each client message</li>
+</ul>
+<div>#40 BiDi client impelementation</div>
+</div>
+<div>
+<ul>
+<li>requesting and receiving messages in parallel</li>
+<li>a bit more complicated</li>
+<li>but with a good understanding of Go and goroutines, it should
+be rather simple and understandable</li>
+</ul>
+<div><br /></div>
+</div>
+<div>#43 Hands on: gRPC Advanced features, deep dive</div>
+<div>Errors</div>
+<div>
+<ul>
+<li>in HTTP there are many error codes</li>
+<ul>
+<li>2xx, 3xx, 4xx, 5xx</li>
+<li>standardized, but not usually clear</li>
+</ul>
+<li>in gRPC there is just a few error codes</li>
+<ul>
+<li><span style="background-color: rgb(255, 255, 0);">see
+https://grpc.io/docs/guides/error.html</span></li>
+</ul>
+<li>a complete reference to implementation of error
+codes&nbsp;<br /></li>
+<ul>
+<li><span style=
+"background-color: rgb(255, 255, 0);">http://avi.im/grpc-errors</span></li>
+</ul>
+<li>if an applications need to return extra information on top of
+an error code, it can use the metadata context</li>
+<li>see "Error handling and debugging" on grpc.io page</li>
+</ul>
+<div>#44 implement error codes</div>
+</div>
+<div><br /></div>
 </div>
 </div>
 </en-note>]]></Content>
-        <ContentLength>7111</ContentLength>
+        <ContentLength>9286</ContentLength>
         <Created>1615661976103</Created>
-        <Updated>1616237542123</Updated>
+        <Updated>1616332607303</Updated>
         <Active>true</Active>
         <UpdateSequenceNumber>0</UpdateSequenceNumber>
         <NotebookGuid>a3e38484-8dd9-4cba-9e43-8c43fb71bb61</NotebookGuid>
