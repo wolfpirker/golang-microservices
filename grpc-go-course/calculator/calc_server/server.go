@@ -78,6 +78,42 @@ func mod(a, b int32) int32 {
 	return m
 }
 
+func (*server) FindMaximum(stream calcpb.CalcService_FindMaximumServer) error {
+	fmt.Printf("FindMaximum function was invoked with a streaming request\n")
+
+	numbers := []int32{}
+	for {
+		req, err := stream.Recv()
+		if err == io.EOF {
+			return nil
+		}
+		if err != nil {
+			log.Fatalf("Error while reading client stream: %v", err)
+			return err
+		}
+		num := req.GetNumber()
+		numbers = append(numbers, num)
+
+		sendErr := stream.Send(&calcpb.FindMaximumResponse{
+			Result: max(numbers),
+		})
+		if sendErr != nil {
+			log.Fatalf("Error while sending data to client: %v", sendErr)
+			return sendErr
+		}
+	}
+}
+
+func max(array []int32) int32 {
+	var max int32 = array[0]
+	for _, value := range array {
+		if max < value {
+			max = value
+		}
+	}
+	return max
+}
+
 func main() {
 	fmt.Println("Calculator server")
 
