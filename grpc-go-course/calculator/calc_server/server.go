@@ -81,7 +81,7 @@ func mod(a, b int32) int32 {
 func (*server) FindMaximum(stream calcpb.CalcService_FindMaximumServer) error {
 	fmt.Printf("FindMaximum function was invoked with a streaming request\n")
 
-	numbers := []int32{}
+	maximum := int32(0)
 	for {
 		req, err := stream.Recv()
 		if err == io.EOF {
@@ -92,10 +92,12 @@ func (*server) FindMaximum(stream calcpb.CalcService_FindMaximumServer) error {
 			return err
 		}
 		num := req.GetNumber()
-		numbers = append(numbers, num)
+		if num > maximum {
+			maximum = num
 
+		}
 		sendErr := stream.Send(&calcpb.FindMaximumResponse{
-			Result: max(numbers),
+			Result: maximum,
 		})
 		if sendErr != nil {
 			log.Fatalf("Error while sending data to client: %v", sendErr)
@@ -104,6 +106,7 @@ func (*server) FindMaximum(stream calcpb.CalcService_FindMaximumServer) error {
 	}
 }
 
+/* mustn't be so complicated
 func max(array []int32) int32 {
 	var max int32 = array[0]
 	for _, value := range array {
@@ -112,7 +115,7 @@ func max(array []int32) int32 {
 		}
 	}
 	return max
-}
+}*/
 
 func main() {
 	fmt.Println("Calculator server")
